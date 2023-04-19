@@ -23,7 +23,7 @@ corr rating average_playtime negative_ratings price has_achievements lower_bound
 
 corr rating average_playtime  price has_achievements lower_bound 
 
-reg postive_ratings average_playtime price has_achievements lower_bound 
+reg positive_ratings average_playtime price has_achievements lower_bound 
 
 reg positive_ratings average_playtime negative_ratings price has_achievements lower_bound genreslbl // i want to try and see all genres listed in this regression giving values 0-10 for top highest rated pvaulues for the regressional analysis
 
@@ -31,25 +31,50 @@ reg positive_ratings average_playtime negative_ratings price has_achievements lo
 
 corr positive_ratings genresmassivelymultiplayer genresadventure genresfreetoplay genressimulation genresearlyaccess genresrpg genresaction genresstrategy genrescasual genresindie genresrpg
 
-// make a new variable 
 
-label define genreslbl 0 "massivelymultiplayer" 1 "adventure" 2 "freetoplay" 3 "simulation" 4 "earlyaccess" 5 "rpg" 6 /// 
-"action" 7 "strategy" 8 "casual" 9 "indie" 10 "rpg"
-label values genres genreslbl 
-
-reg positive_ratings average_playtime negative_ratings price has_achievements lower_bound genresearlyaccess genresfreetoplay i.num_platforms
-
-reg lnpr average_playtime negative_ratings price has_achievements lower_bound genresearlyaccess genresfreetoplay i.num_platforms
+reg positive_ratings average_playtime negative_ratings price has_achievements i.num_platforms 
+reg lnpr average_playtime negative_ratings price has_achievements lower_bound  i.num_platforms
 
 vif
 
 
 
+eststo clear
+quietly eststo summstats: estpost summarize positive_ratings average_playtime negative_ratings price has_achievements lower_bound i.num_platforms
+esttab using sumstats.rtf, cell("mean sd min max") mtitle("Summary Statistics")
 
 
+eststo: quietly wls positive_ratings average_playtime negative_ratings price has_achievements lower_bound i.num_platforms, wvar(length) type(abse) noconst
+
+eststo: reg positive_ratings average_playtime negative_ratings price has_achievements lower_bound i.num_platforms 
 
 
+rvpplot price, yline(0)
 
+
+estat imtest, white
+
+eststo: reg positive_ratings average_playtime negative_ratings price has_achievements i.num_platforms, vce(robust)
+
+
+/// WLS assuming heteroskaedastcitiy comes from
+reg positive_ratings average_playtime negative_ratings price has_achievements i.num_platforms 
+
+predict fit
+
+predict se, residuals
+
+gen abse = abs(se)
+
+regress abse fit
+
+predict fit2
+
+generate weight = (1/fit2)^2
+
+estasto: reg positive_ratings average_playtime negative_ratings price has_achievements i.num_platforms [aweight = weight]
+
+esttab using results01.rtf, replace title ("Effect of price on positive_ratings")
 
 
 
