@@ -104,7 +104,7 @@ eststo: quietly reg positive_ratings achievements
 eststo: quietly reg positive_ratings achievements, vce(cluster negative_ratings)
 eststo: quietly reg positive_ratings achievements average_playtime negative_ratings price i.num_platforms 
 /*1 wls regression*/
-eststo: quietly wls0 positive_ratings achievements average_playtime negative_ratings price i.num_platforms, wvar(achievements) type(abse) noconst 
+eststo: quietly wls0 positive_ratings achievements average_playtime negative_ratings price num_platforms, wvar(achievements) type(abse) noconst 
 
 esttab using results_cs.rtf, replace n se r2 ar2 star(* 0.10 ** 0.05 *** 0.01) ///
 mlabel("OLS" "OLS w/ RSE" "OLS" "WLS")
