@@ -1,2 +1,3 @@
 # steam_goated_dataset
-This is my repository for my eco 400 senior capstone class
+**Exploring the Causal Relationship between Game Features and Positive User Feedback in the Steam Marketplace**
+
