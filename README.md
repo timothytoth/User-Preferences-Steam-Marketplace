@@ -9,7 +9,7 @@ Given the scarcity of publicly available resources, I strategically selected the
 steam.csv has 27,076 Rows and 18 features. Which were relating to a video games individualistic game features and user playtime.
 
 # What are video game features and why use them?
-All video games in the steam marketplace are given game features to describe the overall game. Such as price, average playtime, devolopers, categories, total achievements, platforms its available on, price, release date, genres  
+All video games in the steam marketplace are given game features to describe the overall game. Such as price, average playtime, devolopers, categories, total achievements, platforms its available on, release date, genres  
 
 # Objective 
 In this project, I want to specifically explore if the preseance of achievements affects the predicted value of positive ratings for a video game within the steam marketplace. Furthermore I will be putting to the test, if the presence of early access release games and free to play have a postive or negative effect as well. I want to explore the consumer behavor and preferences in the video game industry. To accomplish this, I will be running a weighted least squares regression
