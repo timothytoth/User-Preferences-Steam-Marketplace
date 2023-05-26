@@ -22,7 +22,7 @@ Heteroscedasticity can lead to biased and inefficient estimates in ordinary leas
 # Seeing what genres is most positively rated within the consumers giving that video game above 90% rating
 ![Screenshot 2023-04-25 172937](https://github.com/timothytoth/steam_goated_dataset/assets/120987606/da5bee67-200f-4608-a6f2-81c737f13557)
 
-#Conclusion, Results, and Actionable Next Steps
+# Conclusion, Results, and Actionable Next Steps
 ![Screenshot 2023-04-26 204829](https://github.com/timothytoth/steam_goated_dataset/assets/120987606/cc33d0d5-2752-454e-a822-ff699341b30b)
 Through this project, I successfully ran a causal inference model to predict the effect of game design on positive ratings for video games. The model achieved an accuracy of 92% on unseen test data, demonstrating its effectiveness in identifying well-received games.
 
