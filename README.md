@@ -19,6 +19,8 @@ The weighted least squares regression was used in order to analyze the factors i
 
 Heteroscedasticity can lead to biased and inefficient estimates in ordinary least squares (OLS) regression. By using a weighted least squares regression, the author was able to give more weight to observations with lower variability and less weight to observations with higher variability, thus addressing the issue of heteroscedasticity and improving the accuracy of the regression results.
 
+# Seeing what categories is most psotively rated within the consumers giving that video game above 90% rating
+![Screenshot 2023-04-25 172937](https://github.com/timothytoth/steam_goated_dataset/assets/120987606/da5bee67-200f-4608-a6f2-81c737f13557)
 
 
 
