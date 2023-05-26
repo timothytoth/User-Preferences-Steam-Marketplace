@@ -5,12 +5,14 @@ I embarked on a project that delves into the factors influencing positive rating
 Given the scarcity of publicly available resources, I strategically selected the Steam marketplace as my target for investigation. Being an avid video game enthusiast, I thoroughly enjoy immersing myself in various gaming experiences and engaging with friends. Thus, it seemed only natural to undertake a study that sheds light on the determinants of positive ratings within this vibrant ecosystem.
 
 # About the Data 
-* One dataset: "df.csv" (contains 
+* One dataset: steam.csv was downloaded from kaggle
+steam.csv has 27,076 Rows and 18 features. Which were relating to a video games individualistic game features and user playtime.
 
+# What are video game features and why use them?
+All video games in the steam marketplace are given game features to describe the overall game. Such as price, average playtime, devolopers, categories, total achievements, platforms its available on, price, release date, genres  
 
-* Created a model that determines the impact video game features have on the total positive rating for a game within the steam marketplace 
-* Dataset is from Kaggle that was gathered around May 2019 from the Steam Store using SteamSpy Api’s uncleaned 27000 video games
-*
+# Objective 
+In this project, I want to specifically explore if the preseance of achievements affects the predicted value of positive ratings for a video game within the steam marketplace. Furthermore I will be putting to the test, if the presence of early access release games and free to play have a postive or negative effect as well. I want to explore the consumer behavor and preferences in the video game industry. To accomplish this, I will be running a weighted least squares regression
 
 
 
