@@ -14,6 +14,11 @@ All video games in the steam marketplace are given game features to describe the
 # Objective 
 In this project, I want to specifically explore if the preseance of achievements affects the predicted value of positive ratings for a video game within the steam marketplace. Furthermore I will be putting to the test, if the presence of early access release games and free to play have a postive or negative effect as well. I want to explore the consumer behavor and preferences in the video game industry. To accomplish this, I will be running a weighted least squares regression
 
+# Why use a weighted least square regression?
+The weighted least sqaures regression was used in order to analyze the factors influencing positive ratings for video games on the Steam Marketplace. The weighted least squares regression was chosen as a method to account for heteroscedasticity in the data, which means that the variability of the errors may not be constant across the range of predictor variables.
+
+Heteroscedasticity can lead to biased and inefficient estimates in ordinary least squares (OLS) regression. By using a weighted least squares regression, the author was able to give more weight to observations with lower variability and less weight to observations with higher variability, thus addressing the issue of heteroscedasticity and improving the accuracy of the regression results.
+
 
 
 
