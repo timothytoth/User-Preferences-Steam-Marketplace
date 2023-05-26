@@ -4,10 +4,13 @@ I embarked on a project that delves into the factors influencing positive rating
 
 Given the scarcity of publicly available resources, I strategically selected the Steam marketplace as my target for investigation. Being an avid video game enthusiast, I thoroughly enjoy immersing myself in various gaming experiences and engaging with friends. Thus, it seemed only natural to undertake a study that sheds light on the determinants of positive ratings within this vibrant ecosystem.
 
+# About the Data 
+* One dataset: "df.csv" (contains 
+
 
 * Created a model that determines the impact video game features have on the total positive rating for a game within the steam marketplace 
 * Dataset is from Kaggle that was gathered around May 2019 from the Steam Store using SteamSpy Api’s uncleaned 27000 video games
-*  
+*
 
 
 
